@@ -1,0 +1,64 @@
+Weather:
+  type: "object"
+  config:
+    fields:
+      date_timestamp:
+        type: "Int!"
+        description: "Time of data forecasted, unix, UTC"
+      date_text:
+        type: "String!"
+        description: "Data/time of calculation, UTC"
+      condition:
+        type: "Condition"
+      atmosphere:
+        type: "Atmosphere"
+      astronomy:
+        type: "Astronomy"
+      wind:
+        type: "Wind"
+Atmosphere:
+  type: "object"
+  config:
+    fields:
+      pressure:
+        type: "Float!"
+        description: "Atmospheric pressure , in hPa"
+      visibility:
+        type: "Float!"
+        description: "Visibility in %"
+      humidity:
+        type: "Float!"
+        description: "Humidity, in %"
+Condition:
+  type: "object"
+  config:
+    fields:
+      text:
+        type: "String!"
+        description: "Description"
+      temperature:
+        type: "Float!"
+        description: "Temperature. in Kelvin"
+Astronomy:
+  type: "object"
+  config:
+    fields:
+      sunrise:
+        type: "String!"
+        description: "Sunrise. in am"
+      sunset:
+        type: "String!"
+        description: "Sunset. in pm"
+Wind:
+  type: "object"
+  config:
+    fields:
+      chill:
+        type: "Float!"
+        description: "Wind chill"
+      direction:
+        type: "Float!"
+        description: "Wind direction, in meter/sec"
+      speed:
+        type: "Float!"
+        description: "Wind speed, in meter/sec"

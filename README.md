@@ -2,7 +2,7 @@
 This is a Weather API Microservice using GraphQL using Symfony4,Yahoo Weather API and docker.
 It accepts a city name and return one day weather prediction.
 
-#Usage:
+# Usage:
 
 Input: city name.
 the schema of the query :
@@ -33,17 +33,17 @@ the schema of the query :
 
 Output: One day weather prediction.
 
-#Requirements:
+# Requirements:
 - Install Docker
 - Create the app yahoo using the https://developer.yahoo.com
 
-#Installation:
+# Installation:
 
 $ clone a repo using 
  git clone https://github.com/choukri/weather-graphQL-symfony-api.git
 $ cd weather-graphQL-symfony-api/
 $ docker-compose build
-$ docker-compose -up d
+$ docker-compose up -d
 $ cd myweatherproject
 $ composer install
 $ cd ..
@@ -54,7 +54,7 @@ This api work:
 - by using a method POST request with a parameter named query that contains the GraphQL query 
 - or by using method POST or GET with a graphql query.
 
-#Example
+# Example
 request : 
 {
   weather(city: "casablanca") {

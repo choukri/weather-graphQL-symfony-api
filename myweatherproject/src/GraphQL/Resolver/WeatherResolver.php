@@ -68,13 +68,8 @@ class WeatherResolver implements ResolverInterface, AliasedInterface
         try {
             $data = $this->curl_wrapper->getQueryResult($options);
             $data = json_decode($data, true);
-            //print_r($data);
             $weather = new Weather($data);
-            /*if ($data['cod'] == "200") {
-                $weather = new Weather($data);
-            } else {
-                throw new UserError($data['message']);
-            }*/
+
         } catch (CurlWrapperException $e) {
 
         }
